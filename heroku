@@ -1,0 +1,7 @@
+#!/bin/bash -ex
+
+heroku login;
+
+git remote add heroku git@heroku.com:makers1773bnb.git;
+
+heroku keys:add;
