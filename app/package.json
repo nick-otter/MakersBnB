@@ -6,6 +6,9 @@
     "start": "node ./bin/www",
     "test": "mocha"
   },
+  "devDependencies": {
+    "zombie": "2.0.0-alpha11"
+  },
   "dependencies": {
     "bcrypt": "latest",
     "body-parser": "~1.17.1",

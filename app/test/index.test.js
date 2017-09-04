@@ -9,7 +9,7 @@ var app = require('../app');
 var expect = require('chai').expect;
 var Browser = require('zombie');
 
-describe('auth', function() {
+describe('home page', function() {
 
   before(function() {
     this.server = http.createServer(app).listen(3000);
@@ -17,7 +17,7 @@ describe('auth', function() {
   });
 
   before(function(done) {
-    this.browser.visit('/auth', done);
+    this.browser.visit('/', done);
   });
 
   it('should not be empty', function() {

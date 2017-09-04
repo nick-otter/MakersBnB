@@ -5,6 +5,8 @@ cd ./app;
 # node.js
 brew install node;
 
+brew upgrade 
+
 # yjs package manager
 brew install npm;
 
