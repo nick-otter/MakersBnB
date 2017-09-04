@@ -11,6 +11,11 @@ var auth = require('./routes/auth');
 
 var app = express();
 
+var DatabaseCleaner = require('database-cleaner');
+var databaseCleaner = new DatabaseCleaner('postgresql'); //type = 'mongodb|redis|couchdb'
+
+// databaseCleaner.clean(database, callback); (to be used before/after tests)
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
