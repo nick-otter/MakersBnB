@@ -1,21 +1,12 @@
 #!/bin/bash -ex
 
+cd ./app;
+
 # node.js
 brew install node;
 
-# js package manager
+# yjs package manager
 brew install npm;
 
 # testing
-npm install zombie;
-
-# web server
-npm install express;
-
-# database
-npm install pg;
-npm install knex --save;
-npm install bookshelf --save;
-
-# linter
-npm install -g eslint
+npm install;
