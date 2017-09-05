@@ -9,7 +9,7 @@ var app = require('../app');
 var expect = require('chai').expect;
 var Browser = require('zombie');
 
-describe('home page', function() {
+describe('index', function() {
 
   before(function() {
     this.server = http.createServer(app).listen(3000);
@@ -20,8 +20,9 @@ describe('home page', function() {
     this.browser.visit('/', done);
   });
 
-  it('should not be empty', function() {
-    expect(this.browser.html()).to.not.be.empty;
+  describe('page', function() {
+    it('should not be empty', function() {});
+    it('should display header', function() {});
   });
 
   after(function(done) {

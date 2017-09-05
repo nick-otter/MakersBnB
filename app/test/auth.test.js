@@ -20,8 +20,24 @@ describe('auth', function() {
     this.browser.visit('/auth', done);
   });
 
-  it('should not be empty', function() {
-    expect(this.browser.html()).to.not.be.empty;
+
+  describe('page', function() {
+    it('should not be empty', function() {});
+    it('should display header', function() {});
+    it('should show log in form by default', function() {});
+  });
+
+  describe('log in', function() {
+    it('should display email field', function() { });
+    it('should display password field', function() { });
+    it('should be able to switch to log in form', function() { });
+  });
+
+  describe('sign up', function() {
+    it('should display email field', function() { });
+    it('should display password field', function() { });
+    it('should display password confirm field', function() { });
+    it('should be able to switch to register form', function() { });
   });
 
   after(function(done) {
