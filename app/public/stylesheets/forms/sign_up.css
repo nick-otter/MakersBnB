@@ -1,0 +1,28 @@
+
+div.sign-up-form {
+  width: 100%;
+  height: 100%;
+}
+
+form.sign-up-form {
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+div.sign-up-form-inner {
+  width: 100%;
+}
+
+label.sign-up-form {
+  width: 150px;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+input.sign-up-form {
+  width: 200px;
+  display: inline-block;
+}

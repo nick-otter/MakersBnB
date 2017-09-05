@@ -1,4 +1,22 @@
 
-<table>
-  
-</table>
+<link rel="stylesheet" type="text/css" href="stylesheets/forms/sign_up.css"  />
+
+<div class="sign-up-form">
+  <form class="sign-up-form" action="/auth/sign_up" method="post">
+    <center>
+      <h2>Sign Up</h2>
+    </center>
+    <label class="sign-up-form" for="email">Email:</label>
+    <input class="sign-up-form" type="text" name="email" />
+    <br /><br />
+    <label class="sign-up-form" for="password">Password:</label>
+    <input class="sign-up-form" type="text" name="password" />
+    <br /><br />
+    <label class="sign-up-form" for="password-confirm">Confirm Password:</label>
+    <input class="sign-up-form" type="text" name="password-confirm" />
+    <br /><br />
+    <center>
+      <input class="sign-up-form-submit" type="submit" value="submit" name="submit" />
+    </center>
+  </form>
+</div>
