@@ -2,15 +2,17 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css"  />
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   </head>
   <body>
-    <div>
+    <div class="header-wrapper">
       <%- include('templates/header') %>
     </div>
-    <div>
-      <%- include(feature) %>
+    <div class="feature-wrapper">
+      <div class="feature">
+        <%- include(feature) %>
+      </div>
     </div>
   </body>
 </html>

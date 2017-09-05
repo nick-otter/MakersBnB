@@ -32,7 +32,9 @@ function buildmenu(config, auth) {
   for (var i = 0; i < config.length; i++) {
     item = config[i];
     if(item['auth'] === auth) {
-    button = '<button class = "main_menu_button" onclick="location.href=\'' + item['href'] + '\'">' + item['string'] + '</button>';
+    button = '<div class="main_menu_button_outer">' +
+      '<button class="main_menu_button" onclick="location.href=\'' + item['link'] + '\'">' + item['string'] + '</button>' +
+    '</div>';
     html += button;
     }
   }
@@ -45,8 +47,6 @@ function buildmenu(config, auth) {
  });
 </script>
 
-Hello!
+<link rel="stylesheet" type="text/css" href="stylesheets/templates/header.css"  />
 
-<nav id = "main_menu">
-
-</nav>
+<nav id = "main_menu"></nav>
