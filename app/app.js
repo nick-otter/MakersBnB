@@ -18,7 +18,7 @@ var databaseCleaner = new DatabaseCleaner('postgresql'); //type = 'mongodb|redis
 
 // bookshelf config
 var dbConfig = {
-  client: 'mysql',
+  client: 'postgres',
   connection: {
     host: 'localhost',
     user: 'root',
