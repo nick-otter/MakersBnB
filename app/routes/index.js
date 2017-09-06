@@ -3,8 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var feature = 'forms/auth_tabs'
-  res.render('index', { title: 'Express', feature: feature });
+  res.render('index', { title: 'Makers Bnb', feature: 'forms/auth_tabs' });
 });
 
 
