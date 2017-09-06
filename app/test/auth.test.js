@@ -17,20 +17,50 @@ describe('auth', function() {
   });
 
   before(function(done) {
-    this.browser.visit('/auth', done);
+    this.browser.visit('/', done);
   });
 
-
-  describe('page', function() {
-    it('should not be empty', function() {});
-    it('should display header', function() {});
-    it('should show log in form by default', function() {});
+  describe('page when logged in', function() {
+    it('should not be empty', function() {
+      expect(this.browser.html()).to.not.be.empty;
+    });
+    it('should display header', function() {
+      expect(this.browser.html()).to.have.string('header-wrapper');
+    });
+    it('should show log in form by default', function() {
+      expect(this.browser.html()).to.have.string('log-in-form')
+    });
   });
 
-  describe('log in', function() {
-    it('should display email field', function() { });
-    it('should display password field', function() { });
-    it('should be able to switch to log in form', function() { });
+  describe('header wrapper', function() {
+    it('should display spaces header', function() {
+      expect(this.browser.html()).to.have.string('spaces');
+    });
+    it('should display requests header', function() {
+      expect(this.browser.html()).to.have.string('requests');
+    });
+    it ('should display logout header', function() {
+      expect(this.browser.html()).to.have.string('logout');
+    });
+  });
+
+  describe('log in form', function() {
+    it('should display log in header', function() {
+      expect(this.browser.html()).to.have.string('Log In')
+    });
+    it('should display email field', function() {
+      expect(this.browser.html()).to.have.string('Email:')
+    });
+    it('should display password field', function() {
+      expect(this.browser.html()).to.have.string('Password:');
+    });
+    it('should be able to switch to sign up form', function() {
+      // var component = '<button class="tablinks" id="default-tab" onclick="showForm(event, \'log-in\')">Log In</button>'
+      // const button = findRenderedDOMComponentWithTag(component);
+      // expect(button).to.be.ok;
+      // Simulate.click(button);
+      // expect(this.browser.html()).to.have.string('Confirm Password:')
+    });
   });
 
   describe('sign up', function() {
