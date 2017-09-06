@@ -20,6 +20,7 @@ describe('auth', function() {
     this.browser.visit('/', done);
   });
 
+
   describe('page when logged in', function() {
     it('should not be empty', function() {
       expect(this.browser.html()).to.not.be.empty;
@@ -55,19 +56,50 @@ describe('auth', function() {
       expect(this.browser.html()).to.have.string('Password:');
     });
     it('should be able to switch to sign up form', function() {
-      // var component = '<button class="tablinks" id="default-tab" onclick="showForm(event, \'log-in\')">Log In</button>'
-      // const button = findRenderedDOMComponentWithTag(component);
-      // expect(button).to.be.ok;
-      // Simulate.click(button);
-      // expect(this.browser.html()).to.have.string('Confirm Password:')
+      this.browser.pressButton("Sign Up")
+      expect(this.browser.html()).to.have.string('Log In')
+      expect(this.browser.html()).to.have.string('Confirm Password:')
     });
   });
 
   describe('sign up', function() {
-    it('should display email field', function() { });
-    it('should display password field', function() { });
-    it('should display password confirm field', function() { });
-    it('should be able to switch to register form', function() { });
+    it('should display email field', function() {
+      this.browser.pressButton("Sign Up")
+      expect(this.browser.html()).to.have.string('Email:')
+    });
+    it('should display password field', function() {
+      this.browser.pressButton("Sign Up")
+      expect(this.browser.html()).to.have.string('Password:')
+    });
+    it('should display password confirm field', function() {
+      this.browser.pressButton("Sign Up")
+      expect(this.browser.html()).to.have.string('Confirm Password:')
+    });
+    it('should be able to switch to log in form', function() {
+      this.browser.pressButton("Log In")
+      expect(this.browser.html()).to.have.string('Log In')
+    });
+  });
+
+  describe('logging in', function() {
+    it('log in successful', function() {
+      this.browser
+        .fill('email', 'test@test.com')
+        .fill('password', '123')
+        .pressButton('submit');
+      this.browser.assert.success();
+    });
+  });
+
+  describe('signing up', function() {
+    it('sign up successful', function() {
+      this.browser
+        .fill('email', 'test@test.com')
+        .fill('password', '123')
+        .fill('confim password', '123')
+        .pressButton('submit');
+      this.browser.assert.success();
+    });
   });
 
   after(function(done) {
