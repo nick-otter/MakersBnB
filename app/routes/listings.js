@@ -18,7 +18,16 @@ router.get('/new', function(req, res){
    res.render('index', { title: 'new_listing', feature: './forms/newlisting'});
  });
 
-
+ router.post('/', function(req, res) {
+ new Listing({
+     name: req.body.name,
+     description: req.body.description,
+     price: req.body.price,
+     startDate: req.body.startDate,
+     endDate: req.body.endDate,
+   })
+     .save(); res.redirect('/listings');
+     });
 
 
 
