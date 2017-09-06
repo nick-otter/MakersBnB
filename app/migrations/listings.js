@@ -6,9 +6,9 @@ exports.up = function(knex){
     table.increments('id').primary();
     table.string('name');
     table.string('description');
-    table.string('price per night');
-    table.string('available from (DD/MM/YY)');
-    table.string('available to (DD/MM//YY)');
+    table.string('price');
+    table.string('startDate');
+    table.string('endDate');
     table.timestamps();
   });
 };
