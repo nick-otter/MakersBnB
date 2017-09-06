@@ -12,10 +12,7 @@ new User({
     password: req.body.password,
     email: req.body.email,
   })
-    .save()
-    .then(function(saved) {
-      res.json({ saved });
+    .save(); res.redirect('/listings');
     });
-  });
 
 module.exports = router;
