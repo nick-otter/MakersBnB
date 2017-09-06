@@ -13,4 +13,13 @@ router.get('/', function(req, res, next){
 
 });
 
+
+router.get('/new', function(req, res){
+   res.render('index', { title: 'new_listing', feature: './forms/newlisting'});
+ });
+
+
+
+
+
 module.exports = router;

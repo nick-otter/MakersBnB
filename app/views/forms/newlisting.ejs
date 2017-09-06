@@ -1,0 +1,30 @@
+<!-- <link rel="stylesheet" type="text/css" href="stylesheets/forms/sign_up.css"  /> -->
+
+<div class="new-listing-form">
+  <form class="new-listing-form" id="listingform" action="/listings" method="post">
+    <center>
+      <h2>List a Space</h2>
+    </center>
+    <label class="new-listing-form" for="name">Name:</label>
+    <input class="new-listing-form" type="text" name="name" />
+    <br /><br />
+
+
+    <label class="new-listing-form" for="startDate">Available from:</label>
+    <input class="new-listing-form" type="date" name="startDate" />
+    <br /><br />
+    <label class="new-listing-form" for="endDate">Available to:</label>
+    <input class="new-listing-form" type="date" name="endDate" />
+    <br /><br />
+    <label class="new-listing-form" for="price">Price per night:</label>
+    <input class="new-listing-form" type="number" name="price" />
+    <br /><br />
+  <textarea rows="4" cols="50" name="description" form="listingform">
+Enter description here...</textarea>
+<br /><br />
+<input class="new-listing-form-submit" type="submit" value="submit" name="submit" />
+
+</form>
+
+<br /><br />
+</div>
