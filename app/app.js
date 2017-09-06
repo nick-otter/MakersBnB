@@ -18,21 +18,21 @@ var databaseCleaner = new DatabaseCleaner('postgresql'); //type = 'mongodb|redis
 // databaseCleaner.clean(database, callback); (to be used before/after tests)
 
 // bookshelf config
-var dbConfig = {
-  client: 'postgres',
-  connection: {
-    host: 'localhost',
-    user: 'root',
-    password: 'your_password',
-    database: 'blog',
-    charset: 'utf8'
-  }
-};
-
-var knex = require('knex')(dbConfig);
-var bookshelf = require('bookshelf')(knex);
-
-app.set('bookshelf', bookshelf);
+// var dbConfig = {
+//   client: 'postgres',
+//   connection: {
+//     host: 'localhost',
+//     user: 'root',
+//     password: 'your_password',
+//     database: 'blog',
+//     charset: 'utf8'
+//   }
+// };
+//
+// var knex = require('knex')(dbConfig);
+// var bookshelf = require('bookshelf')(knex);
+// 
+// app.set('bookshelf', bookshelf);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
