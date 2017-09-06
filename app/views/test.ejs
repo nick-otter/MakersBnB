@@ -1,0 +1,19 @@
+
+
+
+<div class="listings-wrapper">
+  <center>
+    <h1>Current Listings</h1>
+  </center>
+</div>
+
+<center>
+<% listings.forEach(function(listing) { %>
+    <div>
+        <label>
+
+             <%= listing.name %>
+        </label>
+    </div>
+<% }) %>
+</center>
