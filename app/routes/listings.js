@@ -4,14 +4,20 @@ var Listing = require('../models/listing');
 
 /* GET listings page. */
 
-router.get('/', function(req, res, next){
+router.get('/', function(req, res){
   Listing
   .fetchAll()
   .then(function(listings){
-   res.render('index', { title: 'listings', feature: 'listings', list: listings});
+    // res.json({ listings });
+    res.locals.listings = listings.toJSON();
+
+   res.render('index', { title: 'listings', feature: 'listings'})
+  //  for (var i = 0; i < listings.length; i++) {
+    //  console.log(listings.serialize())
+   })
  });
 
-});
+// });
 
 
 router.get('/new', function(req, res){
@@ -26,7 +32,8 @@ router.get('/new', function(req, res){
      startDate: req.body.startDate,
      endDate: req.body.endDate,
    })
-     .save(); res.redirect('/listings');
+     .save()
+     .then(res.redirect('/listings'));
      });
 
 
