@@ -1,9 +1,23 @@
-<script type="text/javascript" src="javascripts/viewListings.js"></script>
+<!-- <script type="text/javascript" src="javascripts/viewListings.js"></script> -->
 
 <script>
+function buildListings(listings) { console.log(listings);
+  string = '';
+listings.forEach(function(item) {
+  opener = '<tr class="listing">'
+  content = '<h4 class="listing">' + item.name + '</h4>' + '<br />' +
+  '<p class="listing">' +
+    item.description +
+  '</p>'
+  closer = '</tr>'
+  string += (opener + content + closer)
+})
+  return string;
+};
+
   $( document ).ready(function() {
-      document.getElementById("listings").innerHTML = buildListings(list);
-  });
+      document.getElementById("listings").innerHTML = buildListings(listings);
+  })
 
 </script>
 
