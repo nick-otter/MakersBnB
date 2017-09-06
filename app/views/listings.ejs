@@ -1,2 +1,14 @@
 
-hello, this is a test!
+<script>
+  $( document ).ready(function() {
+      document.getElementById("listings").innerHTML = buildListings(list);
+  });
+
+</script>
+
+<div class="listings-wrapper">
+  <center>
+    <h1>Current Listings</h1>
+  </center>
+  <table class="listings" id="listings"></table>
+</div>
