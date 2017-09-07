@@ -16,26 +16,31 @@
 
 <h2>Pick a Night:</h2>
 
+<%= listing.name %> is available from <%= listing.startDate %> until <%= listing.endDate %>
 
 <div>
   <center>
     <input type="text" id="datepicker"/>
-    <br />
-    <br />
+    <input type="hidden" id="datefrom" value=2017-09-08 />
+    <input type="hidden" id="dateto" value=2017-09-15 />
+    <br/>
+    <br/>
     <form action='/listings/requests' method ='POST'>
       <input type='submit' value='Request to Book'>
     </form>
   </center>
-
 </div>
 
 
 
 <script>
   $(document).ready(function(){
-    $('#datepicker').dcalendarpicker(); //Initializes the date picker
+    $('#datepicker').dcalendarpicker({format: 'yyyy-mm-dd'}); //Initializes the date picker
   });
 </script>
+
+<!-- <input type="text" id="datefrom" data-rangeto=<%= listing.endDate %>/>   //Maximum enabled date is <= value of #dateto
+<input type="text" id="dateto" data-rangefrom=<%= listing.startDate %> data-maxdate="today"/>  //Minimum enabled date is >= value of #datefrom -->
 
 <!--
 calendar is an array: displayed as calendar
