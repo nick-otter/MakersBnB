@@ -1,3 +1,13 @@
+<head>
+<link a href="/stylesheets/dcalendar.picker.css" rel="stylesheet">
+</head>
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script src="/dcalendar.picker.js"></script>
+
+
+
 <div>
 <h1><%= listing.name %></h1>
        <br />
@@ -9,12 +19,23 @@
 
 <div>
   <center>
+    <input type="text" id="datepicker"/>
+    <br />
+    <br />
     <form action='/listings/requests' method ='POST'>
       <input type='submit' value='Request to Book'>
     </form>
   </center>
+
 </div>
 
+
+
+<script>
+  $(document).ready(function(){
+    $('#datepicker').dcalendarpicker(); //Initializes the date picker
+  });
+</script>
 
 <!--
 calendar is an array: displayed as calendar

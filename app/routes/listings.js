@@ -43,7 +43,7 @@ router.get('/:id', function(req, res) {
     .then(function(listing){
     res.locals.listing = listing.toJSON();
 
-    res.render('index', { title: 'listing', feature: 'listing'})
+    res.render('listing')
   });
 });
 
