@@ -9,11 +9,13 @@
 
 <center>
 <% listings.forEach(function(listing) { %>
-    <div>
-        <label>
-
+    <button>
+      <div>
+        <label><a href = "/listings/<%=listing.id%>">
              <%= listing.name %>
         </label>
     </div>
+  </button>
+    <br>
 <% }) %>
 </center>
