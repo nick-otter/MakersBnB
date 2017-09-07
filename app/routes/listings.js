@@ -36,6 +36,16 @@ router.get('/new', function(req, res){
      .then(res.redirect('/listings'));
      });
 
+router.get('/:id', function(req, res) {
+  Listing
+    .where('id', req.params.id)
+    .fetch()
+    .then(function(listing){
+    res.locals.listing = listing.toJSON();
+
+    res.render('index', { title: 'listing', feature: 'listing'})
+  });
+});
 
 
 module.exports = router;
