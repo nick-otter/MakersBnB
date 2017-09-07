@@ -1,6 +1,6 @@
 /* -- DO NOT REMOVE --
  * jQuery DCalendar and DCalendar Picker 2.1 plugin
- * 
+ *
  * Author: Dionlee Uy
  * Email: dionleeuy@gmail.com
  *
@@ -34,9 +34,9 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 			this.maxDate = this.elem.data('maxdate');
 			this.rangeFromEl = this.elem.data('rangefrom');
 			this.rangeToEl = this.elem.data('rangeto');
-			
+
 			this.selected = new Date(this.date.getFullYear(), this.date.getMonth(), this.date.getDate());
-			
+
 			var that = this;
 
 			this.create(this.viewMode);
@@ -56,7 +56,7 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 		    		day = parseInt($(this).text()),
 					plus = span.hasClass('pm') ? -1 : span.hasClass('nm') ? 1 : 0,
 					selectedDate = new Date(that.date.getFullYear(), that.date.getMonth() + plus, day);
-				
+
 				if(that.disabledDate(selectedDate)) return;
 
 				that.selected = selectedDate;
@@ -288,7 +288,7 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 							if (pmDate.getTime() == that.selected.getTime()) week[a].addClass('selected');
 							if (pmDate.getTime() == today.getTime()) week[a].addClass('current');
 						}
-					} 
+					}
 					// Last week
 					else if (i > 4) {
 					    var nmDate = new Date(d.getFullYear(), d.getMonth() + 1, 1);
@@ -359,9 +359,9 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 						}
 					});
 				}
-				
+
 				lblMonth.text(months[that.date.getMonth()] + ' ' + that.date.getFullYear());
-				
+
 				if (!isTrigger && !curr.hasClass('months')) {
 					lblTodayDay.text(short_days[that.today.getDay()]);
 					lblTodayMonth.text(short_months[that.today.getMonth()]);
@@ -426,7 +426,7 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 				break;
 			}
 
-			if(mode !== 'calendar') { 
+			if(mode !== 'calendar') {
 				wrapper.addClass('picker');
 				overlay.appendTo('body');
 			}
@@ -495,9 +495,9 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 				that.val(e.date).trigger('onchange');
 				cal.hide(function () {
 					that.trigger($.Event('datechanged', {date: e.date}));
-				});				
+				});
 			}).on('keydown', function(e){
-				if(ex_keys.indexOf(e.which) < 0 && that.data(DCAL_DATA).options.readOnly) return false; 
+				if(ex_keys.indexOf(e.which) < 0 && that.data(DCAL_DATA).options.readOnly) return false;
 			});
 			$(document).on('keydown', function (e) {
 				if(e.keyCode != 27) return;
