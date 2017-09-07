@@ -11,7 +11,7 @@ router.get('/', function(req, res){
     // res.json({ listings });
     res.locals.listings = listings.toJSON();
 
-   res.render('index', { title: 'listings', feature: 'listings'})
+   res.render('index', { title: 'listings', feature: 'test'})
   //  for (var i = 0; i < listings.length; i++) {
     //  console.log(listings.serialize())
    })
