@@ -16,3 +16,20 @@ new User({
     });
 
 module.exports = router;
+
+
+router.post('/log_in', function(req, res) {
+        var email = req.body.email;
+        var password = req.body.password;
+
+        User.where({email: email}).fetch()
+        .then(function(user) {
+          if(!user) {
+               res.redirect('/log_in');
+           }
+          else {
+              //  req.session.user = user.dataValues;
+               res.redirect('/listings');
+           }
+         });
+       });
