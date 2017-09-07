@@ -25,7 +25,7 @@ router.post('/log_in', function(req, res) {
         User.where({email: email}).fetch()
         .then(function(user) {
           if(!user) {
-               res.redirect('/log_in');
+               res.redirect('/');
            }
           else {
               //  req.session.user = user.dataValues;
