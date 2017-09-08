@@ -19,12 +19,15 @@
     "expectations": "latest",
     "express": "~4.15.2",
     "express-generator": "latest",
+    "express-session": "latest",
     "knex": "latest",
     "mocha": "^3.5.0",
     "morgan": "~1.8.1",
     "pg": "latest",
     "serve-favicon": "~2.4.2",
     "zombie": "latest",
-    "database-cleaner": "latest"
+    "database-cleaner": "latest",
+    "sequelize": "latest",
+    "node-session": "latest"
   }
 }

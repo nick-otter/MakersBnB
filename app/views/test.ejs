@@ -4,19 +4,16 @@
 <div class="listings-wrapper">
   <center>
     <h1>Current Listings</h1>
-<<<<<<< HEAD
     <form action='/listings/new' method ='GET'>
       <input type='submit' value='List a Space'>
     </form>
-=======
->>>>>>> master
   </center>
 </div>
 
-<center>
 <% listings.forEach(function(listing) { %>
-<<<<<<< HEAD
-
+    <button>
+      <div>
+        <label><a href = "/listings/<%=listing.id%>">
       <div>
         <button><a href = "/listings/<%=listing.id%>">
              <%= listing.name %>
@@ -24,9 +21,10 @@
              <%= listing.description %>
         </button>
     </div>
+  </button>
+    <br>
 
     <br />
-=======
     <button>
       <div>
         <label><a href = "/listings/<%=listing.id%>">
@@ -35,6 +33,4 @@
     </div>
   </button>
     <br>
->>>>>>> master
 <% }) %>
-</center>
