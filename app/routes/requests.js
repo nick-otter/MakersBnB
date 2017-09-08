@@ -14,6 +14,8 @@ router.get('/', function(req, res){
    res.render('index', { title: 'requests', feature: 'test' })
 });
 
+});
+
 router.get('/new', function(req, res){
    res.render('index', { title: 'new_listing', feature: './forms/newlisting'});
  });
@@ -29,3 +31,5 @@ router.get('/new', function(req, res){
      .save()
      .then(res.redirect('/listings'));
    });
+
+   module.exports = router;
