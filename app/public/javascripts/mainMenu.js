@@ -11,8 +11,8 @@ MAIN_MENU = [
     auth: false
   },
   {
-    string: 'spaces',
-    link: '/spaces',
+    string: 'listings',
+    link: '/listings',
     auth: true
   },
   {
