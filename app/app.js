@@ -10,12 +10,14 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var auth = require('./routes/auth');
 var listings = require('./routes/listings');
+var requests = require('./routes/requests');
 
 var app = express();
 
 var DatabaseCleaner = require('database-cleaner');
 var databaseCleaner = new DatabaseCleaner('postgresql'); //type = 'mongodb|redis|couchdb'
 
+<<<<<<< HEAD
 // databaseCleaner.clean(database, callback); (to be used before/after tests)
 
 // bookshelf config
@@ -34,6 +36,8 @@ var databaseCleaner = new DatabaseCleaner('postgresql'); //type = 'mongodb|redis
 // var bookshelf = require('bookshelf')(knex);
 //
 // app.set('bookshelf', bookshelf);
+=======
+>>>>>>> origin/listings
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -61,6 +65,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/auth', auth);
 app.use('/listings', listings);
+app.use('/requests', requests);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

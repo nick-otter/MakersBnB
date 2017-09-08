@@ -1,9 +1,6 @@
-
-
-
-<div class="listings-wrapper">
+<div class="requests-wrapper">
   <center>
-    <h1>Current Listings</h1>
+    <h1>Pending Requests</h1>
     <form action='/listings/new' method ='GET'>
       <input type='submit' value='List a Space'>
     </form>
@@ -12,26 +9,15 @@
 
 <center>
 <% listings.forEach(function(listing) { %>
-<<<<<<< HEAD
-    <button>
-      <div>
-        <label><a href = "/listings/<%=listing.id%>">
-=======
 
       <div>
         <button><a href = "/listings/<%=listing.id%>">
->>>>>>> origin/listings
              <%= listing.name %>
              <br />
              <%= listing.description %>
         </button>
     </div>
-<<<<<<< HEAD
-  </button>
-    <br>
-=======
 
     <br />
->>>>>>> origin/listings
 <% }) %>
 </center>
