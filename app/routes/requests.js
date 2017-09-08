@@ -1,18 +1,18 @@
 var express = require('express');
 var router = express.Router();
-var Listing = require('../models/listing');
+var Request = require('../models/request');
 
 
 /* GET listings page. */
 
 router.get('/', function(req, res){
-  Listing
+  Request.where({id: })
   .fetchAll()
-  .then(function(listings){
+  .then(function(requests){
     // res.json({ listings });
-    res.locals.listings = listings.toJSON();
+    res.locals.requests = requests.toJSON();
 
-   res.render('index', { title: 'listings', feature: 'test'})
+   res.render('index', { title: 'requests', feature: 'test'})
   //  for (var i = 0; i < listings.length; i++) {
     //  console.log(listings.serialize())
    })
@@ -26,7 +26,7 @@ router.get('/new', function(req, res){
  });
 
  router.post('/', function(req, res) {
- new Listing({
+ new Request({
      name: req.body.name,
      description: req.body.description,
      price: req.body.price,
@@ -36,17 +36,3 @@ router.get('/new', function(req, res){
      .save()
      .then(res.redirect('/listings'));
      });
-
-router.get('/:id', function(req, res) {
-  Listing
-    .where('id', req.params.id)
-    .fetch()
-    .then(function(listing){
-    res.locals.listing = listing.toJSON();
-
-    res.render('listing')
-  });
-});
-
-
-module.exports = router;
