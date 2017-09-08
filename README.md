@@ -1,7 +1,5 @@
 # MakersBnB
 
-# we tried, we failed, fuck it
-
 # User Specs
 1. As a user I want to be able to sign up
 2. As a user I want to be able to list new spaces
