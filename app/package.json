@@ -27,6 +27,7 @@
     "serve-favicon": "~2.4.2",
     "zombie": "latest",
     "database-cleaner": "latest",
-    "sequelize": "latest"
+    "sequelize": "latest",
+    "node-session": "latest"
   }
 }
