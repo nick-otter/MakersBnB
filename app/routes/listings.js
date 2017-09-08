@@ -9,9 +9,8 @@ router.get('/', function(req, res){
   .fetchAll()
   .then(function(listings){
     res.locals.listings = listings.toJSON();
-
-   res.render('index', { title: 'listings', feature: 'test'})
-     })
+    res.render('index', { title: 'listings', feature: 'test'})
+  })
  });
 
 
