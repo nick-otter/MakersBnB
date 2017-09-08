@@ -6,20 +6,13 @@ var Request = require('../models/request');
 /* GET listings page. */
 
 router.get('/', function(req, res){
-  Request.where({id: })
+ Request.where({id: listinguserid })
   .fetchAll()
   .then(function(requests){
-    // res.json({ listings });
     res.locals.requests = requests.toJSON();
 
-   res.render('index', { title: 'requests', feature: 'test'})
-  //  for (var i = 0; i < listings.length; i++) {
-    //  console.log(listings.serialize())
-   })
- });
-
-// });
-
+   res.render('index', { title: 'requests', feature: 'test' })
+});
 
 router.get('/new', function(req, res){
    res.render('index', { title: 'new_listing', feature: './forms/newlisting'});
@@ -35,4 +28,4 @@ router.get('/new', function(req, res){
    })
      .save()
      .then(res.redirect('/listings'));
-     });
+   });

@@ -1,8 +1,8 @@
 'use string';
 
 var bookshelf = require('../bookshelf');
-var Listing = bookshelf.Model.extend({
+var requests = bookshelf.Model.extend({
   tableName: 'requests',
 });
 
-module.exports = Request;
+module.exports = requests;
