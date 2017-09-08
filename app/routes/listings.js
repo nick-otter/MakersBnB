@@ -8,16 +8,11 @@ router.get('/', function(req, res){
   Listing
   .fetchAll()
   .then(function(listings){
-    // res.json({ listings });
     res.locals.listings = listings.toJSON();
 
    res.render('index', { title: 'listings', feature: 'test'})
-  //  for (var i = 0; i < listings.length; i++) {
-    //  console.log(listings.serialize())
-   })
+     })
  });
-
-// });
 
 
 router.get('/new', function(req, res){
