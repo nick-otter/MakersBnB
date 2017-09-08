@@ -19,7 +19,6 @@ router.get('/new', function(req, res){
    res.render('index', { title: 'new_listing', feature: './forms/newlisting'});
  });
 
- });
 
 // });
 
@@ -47,10 +46,9 @@ router.get('/:id', function(req, res) {
     .then(function(listing){
     res.locals.listing = listing.toJSON();
 
-    res.render('listing')
+    res.render('index', { title: 'Listing', feature: 'listing'})
   });
 });
-
 
 
 module.exports = router;
