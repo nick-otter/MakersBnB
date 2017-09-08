@@ -1,0 +1,23 @@
+<div class="requests-wrapper">
+  <center>
+    <h1>Pending Requests</h1>
+    <form action='/listings/new' method ='GET'>
+      <input type='submit' value='List a Space'>
+    </form>
+  </center>
+</div>
+
+<center>
+<% listings.forEach(function(listing) { %>
+
+      <div>
+        <button><a href = "/listings/<%=listing.id%>">
+             <%= listing.name %>
+             <br />
+             <%= listing.description %>
+        </button>
+    </div>
+
+    <br />
+<% }) %>
+</center>

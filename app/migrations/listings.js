@@ -4,6 +4,7 @@ exports.up = function(knex){
   return knex.schema
   .createTable('listings', function(table){
     table.increments('id').primary();
+    table.string('userid');
     table.string('name');
     table.string('description');
     table.string('price');
