@@ -19,6 +19,15 @@ router.get('/new', function(req, res){
    res.render('index', { title: 'new_listing', feature: './forms/newlisting'});
  });
 
+ });
+
+// });
+
+
+router.get('/new', function(req, res){
+   res.render('index', { title: 'new_listing', feature: './forms/newlisting'});
+ });
+
  router.post('/', function(req, res) {
  new Listing({
      name: req.body.name,
@@ -41,6 +50,7 @@ router.get('/:id', function(req, res) {
     res.render('listing')
   });
 });
+
 
 
 module.exports = router;
