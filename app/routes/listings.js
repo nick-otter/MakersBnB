@@ -16,6 +16,7 @@ router.get('/', function(req, res){
   //  for (var i = 0; i < listings.length; i++) {
     //  console.log(listings.serialize())
    })
+<<<<<<< HEAD
  });
 
 // });
@@ -25,6 +26,17 @@ router.get('/new', function(req, res){
    res.render('index', { title: 'new_listing', feature: './forms/newlisting'});
  });
 
+=======
+ });
+
+// });
+
+
+router.get('/new', function(req, res){
+   res.render('index', { title: 'new_listing', feature: './forms/newlisting'});
+ });
+
+>>>>>>> master
  router.post('/', function(req, res) {
  new Listing({
      name: req.body.name,
@@ -37,6 +49,7 @@ router.get('/new', function(req, res){
      .then(res.redirect('/listings'));
      });
 
+<<<<<<< HEAD
 router.get('/:id', function(req, res) {
   Listing
     .where('id', req.params.id)
@@ -47,6 +60,9 @@ router.get('/:id', function(req, res) {
     res.render('listing')
   });
 });
+=======
+
+>>>>>>> master
 
 
 module.exports = router;
